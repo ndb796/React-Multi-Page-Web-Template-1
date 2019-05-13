@@ -1,0 +1,28 @@
+/* 색상 참고:  https://material.io/design/color/ */
+.header {
+    display: table;
+    margin-top: 20px;
+    margin-left: 40px;
+    table-layout: fixed;
+    width: 560px;
+}
+
+.link {
+    display: table-cell;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.link:hover {
+    background: black;
+    color: white;
+}
+
+.link.active {
+    background: darkgray;
+    color: white;
+}

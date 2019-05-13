@@ -18,4 +18,6 @@ cd react-multi-page-web-template-1
 * Install React Router Dom
 ```
 yarn add react-router-dom
+# https://github.com/ndb796/React-Multi-Page-Web-Template-1/commit/94ee6fa902f12271a12c45a8a186296eab454412
+# /, /about, /faq 경로로 테스트
 ```

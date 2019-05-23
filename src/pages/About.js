@@ -1,5 +1,7 @@
 import React from 'react';
 import Board from '../components/Board';
+import Detail from '../components/Detail';
+import { Route, Link } from 'react-router-dom';
 
 const list = [
   {
@@ -31,9 +33,19 @@ const list = [
 function About() {
   return (
     <div>
-      {list.map(board => {
-        return <Board key={board.id} id={board.id} title={board.title}/>
-      })}
+      <div>
+        {list.map(board => {
+          return <Link to={"/about/" + board.id}>
+                  <Board key={board.id} id={board.id} title={board.title}/>
+                </Link>
+        })}
+      </div>
+      <div>
+        <Route
+          path="/about/:id"
+          component={Detail}
+        />
+      </div>
     </div>
   );
 }

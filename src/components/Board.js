@@ -22,8 +22,6 @@ class Board extends React.Component {
                         onMouseEnter={this.hover}
                         onMouseLeave={this.leave}
                         className={this.state.hover ? "content hover" : "content"}>
-                        {this.props.id}
-                        <br />
                         {this.props.title}
                     </div>
                 </div>

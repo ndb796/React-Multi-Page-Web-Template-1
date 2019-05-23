@@ -3,51 +3,46 @@ import Board from '../components/Board';
 import Detail from '../components/Detail';
 import { Route, Link } from 'react-router-dom';
 
-const list = [
-  {
-    id: 1,
-    title: '제목 1'
-  },
-  {
-    id: 2,
-    title: '제목 2'
-  },
-  {
-    id: 3,
-    title: '제목 3'
-  },
-  {
-    id: 4,
-    title: '제목 4'
-  },
-  {
-    id: 5,
-    title: '제목 5'
-  },
-  {
-    id: 6,
-    title: '제목 6'
-  }
-]
+const databaseURL = "https://react-multi-page-app.firebaseio.com";
 
-function About() {
-  return (
-    <div>
+class About extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      list: {}
+    }
+  }
+  _get() {
+    fetch(`${databaseURL}/about.json`).then(res => {
+      if(res.status != 200) {
+        throw new Error(res.statusText);
+      }
+      return res.json();
+    }).then(list => this.setState({list: list}));
+  }
+  componentDidMount() {
+    this._get();
+  }
+  render() {
+    return (
       <div>
-        {list.map(board => {
-          return <Link to={"/about/" + board.id}>
-                  <Board key={board.id} id={board.id} title={board.title}/>
-                </Link>
-        })}
+        <div>
+          {Object.keys(this.state.list).map(id => {
+            const board = this.state.list[id];
+            return <Link key={id} to={"/about/" + id}>
+                    <Board title={board.title}/>
+                  </Link>
+          })}
+        </div>
+        <div>
+          <Route
+            path="/about/:id"
+            component={Detail}
+          />
+        </div>
       </div>
-      <div>
-        <Route
-          path="/about/:id"
-          component={Detail}
-        />
-      </div>
-    </div>
-  );
+    );
+  }
 }
 
 export default About;

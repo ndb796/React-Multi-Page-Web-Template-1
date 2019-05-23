@@ -31,3 +31,8 @@ yarn add react-router-dom
 # https://github.com/ndb796/React-Multi-Page-Web-Template-1/commit/d7e9c89a54178e3122276fb3e11eed8899d6b54f
 # https://github.com/ndb796/React-Multi-Page-Web-Template-1/commit/192a69d04926a18297ce9f49c38824dee4bb305c
 ```
+* Add Board & Detail Routing
+```
+# https://github.com/ndb796/React-Multi-Page-Web-Template-1/commit/f794ffff1d5c03a171640ab27ce094ee150a0790
+# https://github.com/ndb796/React-Multi-Page-Web-Template-1/commit/5bb62f2cdd0086234d493231ee668824e328de61
+````

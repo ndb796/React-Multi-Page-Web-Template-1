@@ -36,3 +36,9 @@ yarn add react-router-dom
 # https://github.com/ndb796/React-Multi-Page-Web-Template-1/commit/f794ffff1d5c03a171640ab27ce094ee150a0790
 # https://github.com/ndb796/React-Multi-Page-Web-Template-1/commit/5bb62f2cdd0086234d493231ee668824e328de61
 ````
+* Get FAQ From Firebase
+
+![image](https://user-images.githubusercontent.com/16822641/58227791-530d6100-7d67-11e9-8649-3646825e1829.png)
+```
+
+```

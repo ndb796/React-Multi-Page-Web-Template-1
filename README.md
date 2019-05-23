@@ -26,3 +26,8 @@ yarn add react-router-dom
 # https://github.com/ndb796/React-Multi-Page-Web-Template-1/commit/00bb34a56d116cc28ceec955ed551b61e5a9c834
 # https://github.com/ndb796/React-Multi-Page-Web-Template-1/commit/bcfbe19ba46b7a06e0f51e7ac1ca797406c0906f
 ```
+* Add Q/A & Q/A Design
+```
+# https://github.com/ndb796/React-Multi-Page-Web-Template-1/commit/d7e9c89a54178e3122276fb3e11eed8899d6b54f
+# https://github.com/ndb796/React-Multi-Page-Web-Template-1/commit/192a69d04926a18297ce9f49c38824dee4bb305c
+```

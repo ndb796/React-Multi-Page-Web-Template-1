@@ -12,7 +12,7 @@ class Faq extends React.Component {
   }
   _get() {
     fetch(`${databaseURL}/faq.json`).then(res => {
-      if(res.status != 200) {
+      if(res.status !== 200) {
         throw new Error(res.statusText);
       }
       return res.json();

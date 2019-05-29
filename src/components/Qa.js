@@ -21,7 +21,7 @@ class Qa extends React.Component {
                     <div className="question">
                         질문: {this.props.question}
                         <div className="icon">
-                            <img src={arrowIcon} onClick={this.toggle}/>
+                            <img src={arrowIcon} onClick={this.toggle} alt="arrowIcon"/>
                         </div>
                     </div>
                     <div

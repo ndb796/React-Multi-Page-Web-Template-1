@@ -1,0 +1,28 @@
+.notification {
+    max-width: 720px;
+    margin: 0 auto;
+}
+.notification-left {
+    width: 15%;
+    float: left;
+    text-align: center;
+}
+.notification-center {
+    width: 60%;
+    float: left;
+}
+.notification-right {
+    width: 20%;
+    float: left;
+}
+@media screen and (max-width: 660px) {
+    .notification-left {
+        display: none;
+    }
+    .notification-center {
+        width: 100%;
+    }
+    .notification-right {
+        display: none;
+    }
+}

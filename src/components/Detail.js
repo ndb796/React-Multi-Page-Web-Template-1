@@ -12,7 +12,7 @@ class Detail extends React.Component {
     }
     _get() {
         fetch(`${databaseURL}/about/${this.props.match.params.id}.json`).then(res => {
-            if(res.status != 200) {
+            if(res.status !== 200) {
                 throw new Error(res.statusText);
             }
             return res.json();

@@ -26,7 +26,7 @@ class Faq extends React.Component {
       <div>
         {Object.keys(this.state.list).map(id => {
           const qa = this.state.list[id];
-          return <Qa question={qa.question} answer={qa.answer} />
+          return <Qa key={id} question={qa.question} answer={qa.answer} />
         })}
       </div>
     );

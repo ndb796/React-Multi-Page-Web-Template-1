@@ -1,6 +1,7 @@
 import React from 'react';
 import Board from '../components/Board';
 import Detail from '../components/Detail';
+import Grid from '@material-ui/core/Grid';
 import { Route, Link } from 'react-router-dom';
 
 const databaseURL = "https://react-multi-page-app.firebaseio.com";
@@ -27,12 +28,18 @@ class About extends React.Component {
     return (
       <div>
         <div>
-          {Object.keys(this.state.list).map(id => {
-            const board = this.state.list[id];
-            return <Link key={id} to={"/about/" + id}>
-                    <Board title={board.title}/>
-                  </Link>
-          })}
+          <Grid container>
+              {Object.keys(this.state.list).map(id => {
+                const board = this.state.list[id];
+                return (
+                  <Grid item xs={3} key={id}>
+                    <Link to={"/about/" + id}>
+                      <Board title={board.title}/>
+                    </Link>
+                  </Grid>
+                );
+              })}
+          </Grid>
         </div>
         <div>
           <Route

@@ -1,18 +1,5 @@
-.container {
-    max-width: 720px;
-    margin: 0 auto;
-}
-.box {
-    width: 50%;
-    float: left;
-}
 .content {
-    background: #ECEFF1;
     margin: 10px;
+    margin-top: 25px;
     text-align: center;
-    padding: 20px;
-    box-shadow: 1px 1px 1px 1px rgba(0, 0, 255, .2);
-}
-.hover {
-    background: #FAFAFA;
 }

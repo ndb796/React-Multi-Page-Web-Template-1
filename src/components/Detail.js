@@ -1,7 +1,32 @@
 import React from 'react';
-import './Detail.css'
+import Paper from '@material-ui/core/Paper';
+import Typography from '@material-ui/core/Typography';
+import { makeStyles } from '@material-ui/core/styles';
 
 const databaseURL = "https://react-multi-page-app.firebaseio.com";
+
+const useStyles = makeStyles(theme => ({
+    root: {
+        margin: theme.spacing(3, 10),
+        padding: theme.spacing(3, 2),
+    },
+}));
+
+function PaperSheet(props) {
+    const classes = useStyles();
+    return (
+        <div>
+            <Paper className={classes.root}>
+                <Typography variant="h5" component="h3">
+                    {props.title}
+                </Typography>
+                <Typography component="p">
+                    {props.content}
+                </Typography>
+            </Paper>
+        </div>
+    );
+}
 
 class Detail extends React.Component {
     constructor(props) {
@@ -28,10 +53,7 @@ class Detail extends React.Component {
     }      
     render() {
         return (
-            <div className="container">
-                제목: {this.state.detail.title}<br />
-                내용: {this.state.detail.content}
-            </div>
+            <PaperSheet title={this.state.detail.title} content={this.state.detail.content} />
         );
     }
 }

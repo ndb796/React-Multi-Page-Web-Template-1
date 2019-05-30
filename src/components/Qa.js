@@ -1,37 +1,39 @@
 import React from 'react';
 
-import './Qa.css';
-import arrowIcon from '../icons/arrow_down.png';
+import ExpansionPanel from '@material-ui/core/ExpansionPanel';
+import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
+import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import Typography from '@material-ui/core/Typography';
+import { makeStyles } from '@material-ui/core/styles';
 
-class Qa extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            active: false
-        };
+const useStyles = makeStyles(theme => ({
+    root: {
+        paddingTop: 40,
+        paddingLeft: 20,
+        paddingRight: 20
+    },
+    panel: {
+        padding: theme.spacing(0.2, 0),
     }
-    toggle = () => {
-        const currentState = this.state.active;
-        this.setState({ active: !currentState })
-    }
-    render() {
-        return (
-            <div className="qa">
-                <div className="text">
-                    <div className="question">
-                        질문: {this.props.question}
-                        <div className="icon">
-                            <img src={arrowIcon} onClick={this.toggle} alt="arrowIcon"/>
-                        </div>
-                    </div>
-                    <div
-                        className={this.state.active ? 'answer' : 'hide'}>
-                        답변: {this.props.answer}
-                    </div>
-                </div>
-            </div>
-        );
-    }
+}));
+
+function Qa(props) {
+    const classes = useStyles();
+    return (
+        <div className={classes.root}>
+            <ExpansionPanel className={classes.panel}>
+                <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+                    <Typography>질문: {props.question}</Typography>
+                </ExpansionPanelSummary>
+                <ExpansionPanelDetails>
+                    <Typography>
+                        답변: {props.answer}
+                    </Typography>
+                </ExpansionPanelDetails>
+            </ExpansionPanel>
+        </div>
+    );
 }
 
 export default Qa;

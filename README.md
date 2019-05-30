@@ -49,3 +49,10 @@ yarn add react-router-dom
 ```
 # https://github.com/ndb796/React-Multi-Page-Web-Template-1/commit/96e0e447c37149fdf94609556b8d62885da4f375
 ```
+
+* Add Notice
+
+![image](https://user-images.githubusercontent.com/16822641/58541388-62445100-8236-11e9-8278-6188bffa5fde.png)
+```
+# https://github.com/ndb796/React-Multi-Page-Web-Template-1/commit/fd612e717ac385a17b82ef9d07da58a582fc3691
+```

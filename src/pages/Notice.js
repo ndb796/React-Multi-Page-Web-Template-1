@@ -33,6 +33,7 @@ class Notice extends React.Component {
   render() {
     return (
       <div>
+        <br/>
         <Paper>
           <Table>
             <TableHead>

@@ -9,6 +9,8 @@ import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
+import Typography from '@material-ui/core/Typography';
+
 
 const databaseURL = "https://react-multi-page-app.firebaseio.com";
 
@@ -39,9 +41,21 @@ class Notice extends React.Component {
             <TableHead>
               {this.props.location.pathname === '/notice' &&
                 <TableRow>
-                  <TableCell align="center">번호</TableCell>
-                  <TableCell align="center">제목</TableCell>
-                  <TableCell align="center">날짜</TableCell>
+                  <TableCell align="center">
+                    <Typography variant="h6">
+                      번호
+                    </Typography>
+                  </TableCell>
+                  <TableCell align="center">
+                    <Typography variant="h6">
+                      제목
+                    </Typography>
+                  </TableCell>
+                  <TableCell align="center">
+                    <Typography variant="h6">
+                      날짜
+                    </Typography>
+                  </TableCell>
                 </TableRow>
               }
             </TableHead>

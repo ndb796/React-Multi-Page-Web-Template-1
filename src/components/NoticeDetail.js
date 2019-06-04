@@ -24,12 +24,12 @@ class NoticeDetail extends React.Component {
     }
     render() {
         return (
-        <div>
+        <div className="detail">
             제목: {this.state.notice['title']}<br />
             내용: {this.state.notice['content']}<br />
             날짜: {this.state.notice['date']}<br />
             <NavLink to="/notice">
-                <strong>&lt; 목록 보기</strong>
+                <strong>목록 보기</strong>
             </NavLink>
         </div>
         );

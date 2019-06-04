@@ -28,7 +28,7 @@ function Header() {
           </NavLink>
           <NavLink to="/notice" className="link" activeClassName="active">
             <TypoGraphy variant="h6" color="inherit">
-              Notice
+              공지사항
             </TypoGraphy>
           </NavLink>
         </Toolbar>

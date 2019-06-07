@@ -7,11 +7,16 @@ import Faq from './pages/Faq';
 import Notice from './pages/Notice';
 
 import Header from './components/Header';
+import { useTranslation, Trans } from "react-i18next";
 
 function App() {
+  const { t, i18n } = useTranslation();
+  const changeLanguage = lng => {
+    i18n.changeLanguage(lng);
+  };
   return (
     <Router>
-      <Header/>
+      <Header changeLanguage={changeLanguage} i18n={i18n} t={t}/>
       <Route exact path="/" component={Home}/>
       <Route path="/about" component={About}/>
       <Route path="/faq" component={Faq}/>

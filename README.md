@@ -56,3 +56,10 @@ yarn add react-router-dom
 ```
 # https://github.com/ndb796/React-Multi-Page-Web-Template-1/commit/fd612e717ac385a17b82ef9d07da58a582fc3691
 ```
+
+* Add Multi Language Support
+```
+yarn add react-i18next
+yarn add i18next
+yarn add i18next-browser-languagedetector
+```

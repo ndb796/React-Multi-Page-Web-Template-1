@@ -4841,6 +4841,11 @@ hmac-drbg@^1.0.0:
     minimalistic-assert "^1.0.0"
     minimalistic-crypto-utils "^1.0.1"
 
+hoist-non-react-statics@^2.3.1:
+  version "2.5.5"
+  resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-2.5.5.tgz#c5903cf409c0dfd908f388e619d86b9c1174cb47"
+  integrity sha512-rqcy4pJo55FTTLWt+bU8ukscqHeE/e9KWvsOW2b/a3afxQZhwkQdT1rPPCJ0rYXdj4vNcasY8zHTH+jF/qStxw==
+
 hoist-non-react-statics@^3.1.0, hoist-non-react-statics@^3.2.1:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-3.3.0.tgz#b09178f0122184fb95acf525daaecb4d8f45958b"
@@ -4902,6 +4907,13 @@ html-minifier@^3.5.20:
     param-case "2.1.x"
     relateurl "0.2.x"
     uglify-js "3.4.x"
+
+html-parse-stringify2@2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/html-parse-stringify2/-/html-parse-stringify2-2.0.1.tgz#dc5670b7292ca158b7bc916c9a6735ac8872834a"
+  integrity sha1-3FZwtyksoVi3vJFsmmc1rIhyg0o=
+  dependencies:
+    void-elements "^2.0.1"
 
 html-webpack-plugin@4.0.0-beta.5:
   version "4.0.0-beta.5"
@@ -4982,6 +4994,18 @@ hyphenate-style-name@^1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/hyphenate-style-name/-/hyphenate-style-name-1.0.3.tgz#097bb7fa0b8f1a9cf0bd5c734cf95899981a9b48"
   integrity sha512-EcuixamT82oplpoJ2XU4pDtKGWQ7b00CD9f1ug9IaQ3p1bkHMiKCZ9ut9QDI6qsa6cpUuB+A/I+zLtdNK4n2DQ==
+
+i18next-browser-languagedetector@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/i18next-browser-languagedetector/-/i18next-browser-languagedetector-3.0.1.tgz#a47c43176e8412c91e808afb7c6eb5367649aa8e"
+  integrity sha512-WFjPLNPWl62uu07AHY2g+KsC9qz0tyMq+OZEB/H7N58YKL/JLiCz9U709gaR20Mule/Ppn+uyfVx5REJJjn1HA==
+
+i18next@^17.0.2:
+  version "17.0.2"
+  resolved "https://registry.yarnpkg.com/i18next/-/i18next-17.0.2.tgz#a8657850b3e9fe200a789089881eaf00d93a43ce"
+  integrity sha512-hDjPzq0R6njFCHQJufxgZw0+czFaepapVB+Bm02AEUyy/50qmnbfvho1LW2tw6HrSwOinDF1yvn1MayefjSscg==
+  dependencies:
+    "@babel/runtime" "^7.3.1"
 
 iconv-lite@0.4.23:
   version "0.4.23"
@@ -8481,10 +8505,30 @@ react-event-listener@^0.6.6:
     prop-types "^15.6.0"
     warning "^4.0.1"
 
+react-i18next@^10.11.0:
+  version "10.11.0"
+  resolved "https://registry.yarnpkg.com/react-i18next/-/react-i18next-10.11.0.tgz#a6854e556d3aff9f5f161b4aa871d43cfff6bd9b"
+  integrity sha512-jmxLZK8mf+KxG3RUIiu/COperTq1c7+iHNsna7LODOYEYaoj6EXFuchOytnB80GoUOb0JC1csT37Zp+U5nPQqQ==
+  dependencies:
+    "@babel/runtime" "^7.3.1"
+    html-parse-stringify2 "2.0.1"
+
 react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.0, react-is@^16.8.1, react-is@^16.8.4:
   version "16.8.6"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.8.6.tgz#5bbc1e2d29141c9fbdfed456343fe2bc430a6a16"
   integrity sha512-aUk3bHfZ2bRSVFFbbeVS4i+lNPZr3/WM5jT2J5omUVV1zzcs1nAaf3l51ctA5FFvCRbhrH0bdAsRRQddFJZPtA==
+
+react-multi-lang@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/react-multi-lang/-/react-multi-lang-1.0.3.tgz#7d0325ae44f4824ac32e332b14acee38349e481e"
+  integrity sha512-CY8Wg6cuQxzqCzQm/WJN9KkKJcqtbnu0i2ol2pKHaeW9JJY6VRovVtEQzbOr/1yOU5fLMBRhqXTI5anrDzMOiA==
+  dependencies:
+    hoist-non-react-statics "^2.3.1"
+
+react-multi-language@^0.4.2:
+  version "0.4.2"
+  resolved "https://registry.yarnpkg.com/react-multi-language/-/react-multi-language-0.4.2.tgz#eaec8a4063fd40f60741c79c23bacf4857753ba7"
+  integrity sha512-nUVlSlVcN1HHmLt2FVobDpyaRYpSAAjAGcBUUr5hcH8DI49uYSHGXE/oshdI/VD0QOAGvHlbhR/FOa/tMB0TwA==
 
 react-router-dom@^5.0.0:
   version "5.0.0"
@@ -10236,6 +10280,11 @@ vm-browserify@0.0.4:
   integrity sha1-XX6kW7755Kb/ZflUOOCofDV9WnM=
   dependencies:
     indexof "0.0.1"
+
+void-elements@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/void-elements/-/void-elements-2.0.1.tgz#c066afb582bb1cb4128d60ea92392e94d5e9dbec"
+  integrity sha1-wGavtYK7HLQSjWDqkjkulNXp2+w=
 
 w3c-hr-time@^1.0.1:
   version "1.0.1"

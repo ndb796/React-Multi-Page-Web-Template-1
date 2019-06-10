@@ -63,3 +63,44 @@ yarn add react-i18next
 yarn add i18next
 yarn add i18next-browser-languagedetector
 ```
+
+* Deploy on AWS Cloud Front
+```
+yarn build
+# check ./build folder
+# create AWS S3 Bucket
+# name: www-deploy-test (Only Next)
+# [Upload] all the build files
+# [Properties] - [Static website hosting] - [Use this bucket to host a website] - index: index.html, error: index.html
+# Open endpoint URL - 403 Forbidden Error
+# 버킷 정책 변환하기
+# [Block public access] - Off [Block public access to buckets and objects granted through new public bucket policies]
+# [Block public access] - Off [Block public and cross-account access to buckets and objects through any public bucket policies]
+# [Bucket Policy]
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "AddPerm",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": [
+                "s3:GetObject"
+            ],
+            "Resource": [
+                "arn:aws:s3:::www-deploy-test/*"
+            ]
+        }
+    ]
+}
+# Open endpoint URL - 200
+# [Cloud Front] - [Create Distribution] - Web [Get Started] - Origin Domain Name 선택 - [Redirect HTTP to HTTPS] - Default Root Object: index.html - [Create Distribution]
+# 10분 뒤 CDN 설정 완료
+# [Network] 탭에서 x-cache: Hit from cloudfront 확인
+# 1) Route53를 이용하는 경우 => 원하는 도메인 추가: ex) Route53에서 Name: test.empoapp.com - Type: A Type - Value: 서버 IP 설정
+# 2) Cloud Flare와 연동된 경우 => Cloud Flare에서 test 서브 도메인 - 서버 IP 설정 (단, 어차피 이용이 어려움.)
+# 결과적으로 test.empoapp.com에 들어갈 수 있는지 먼저 확인
+# Cloud Front 설정 - [General] - [Edit] - Alternate Domain Names: test.empoapp.com - [Request or Import a Certificate with ACM] - Domain Name: test.empoapp.com - DNS validation - [Review] - [Confirm and request]
+# 1) Route53를 이용하는 경우 => [Create record in Route 53] - 기존에 존재하는 도메인에 CNAME 값 추가 - [Continue] - 10분 이내로 Pending 상태에서 완료 상태로 변경 - 이후에 Route S3의 A Type 값을 Cloud Front Alias로 설정
+# 2) Cloud Flare와 연동된 경우 => 이용이 어려움. 대신 Cloud Flare의 기본적은 CDN 기능 이용.
+```

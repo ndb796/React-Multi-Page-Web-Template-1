@@ -110,4 +110,13 @@ yarn build
 # Cloud Front에서 /notice 페이지에서 새로고침을 하게 되면, 403 Forbidden 오류 발생. 왜냐하면 React App은 기본적으로 / 페이지에 접속을 하여, React Router의 기능이 동작하기 때문. 따라서 /notice 페이지를 /index.html 페이지로 보내면 정상적으로 동작.
 # Cloud Front를 이용할 때 React App의 Route 문제 발생 - [CloudFront Distributions] - [Edit] - [Error Pages] - [Create Custom Error Response] - HTTP Error Code: 403 Forbidden - TTL: 60 - Customize Error Response: Yes - Response Page Path: /index.html - HTTP Response Code: 200 OK
 # Cloud Front를 이용하는 것이 아니라, 다른 서비스를 이용할 때에도 비슷한 방식으로 문제를 해결할 수 있음. (Express, Apache, Nginx 등에 따라서 /*를 /index.html로 보내는 방법이 조금씩 다름.)
+# Apache2의 경우 다음과 같이 처리 가능.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.html$ - [L]
+ RewriteCond %{REQUEST_FILENAME} !-f
+ RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.html [L]
+</IfModule>
 ```
